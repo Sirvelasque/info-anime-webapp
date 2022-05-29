@@ -12,7 +12,7 @@ const companiesReducer = (state = [], action) => {
 };
 
 const getAnimes = () => async (dispatch) => {
-  const ids = ['1', '16498', '22319', '30831', '32937', '37450', '7054', '40591', '10165', '40902', '32282', '28171', '849', '12189'];
+  const ids = ['1', '22319', '30831', '32937', '37450', '7054', '40591', '10165', '40902', '32282'];
   const info = [];
   await Promise.all(ids.map((e) => axios.get(`https://api.jikan.moe/v4/anime/${e}`).then((response) => {
     if (response.status === 200) {
