@@ -1,0 +1,13 @@
+header {
+  text-align: center;
+}
+
+html {
+  background-color: #e54986;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  left: 5px;
+  top: 30px;
+}

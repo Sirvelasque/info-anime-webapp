@@ -1,0 +1,40 @@
+.categoriesChard h2 {
+  margin: 20px 8px;
+}
+
+.categoriesChard h4 {
+  margin: 20px;
+}
+
+.animeitem a .chardTitle {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 10px;
+}
+.animeitem a{
+  text-decoration: none;
+  color: white;
+  display: flex;
+}
+
+.animeitem {
+  display: flex;
+  flex-wrap: nowrap;
+  background: linear-gradient(#e54986, black );
+  margin-bottom: 30px;
+}
+
+.fa-heart {
+  width: 100%;
+  height: 20px;
+  margin-top: 20px;
+}
+
+.wrap {
+  display: flex;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+}

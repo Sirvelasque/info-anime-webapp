@@ -1,0 +1,40 @@
+.infoContainer {
+  background-color: #d04278;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.Numbers {
+  text-align: center;
+}
+
+.Numbers ul {
+  text-align: left;
+  padding: 0;
+  display: inline-block;
+  border: 1px solid #e54986;
+}
+
+.list li {
+  list-style-type: none; 
+  padding: 10px 15px;
+}
+
+.fli {
+  background-color: #e54986;
+}
+
+.sli {
+  background-color: #d04278;
+}
+
+.synopsis {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.synopsis .text {
+  text-align: left;
+  background-color: #bd3a6c;
+}
