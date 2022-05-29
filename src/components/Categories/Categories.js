@@ -27,7 +27,7 @@ const Categories = () => {
     if (data.animes.length === 0) {
       dispatch(getAnimes());
     }
-  }, []);
+  }, [data.animes.length, dispatch]);
   const animeList = data.animes.filter((e) => {
     for (let i = 0; i < e.data.data.genres.length; i += 1) {
       if (e.data.data.genres[i].name === data.categorie) return true;
