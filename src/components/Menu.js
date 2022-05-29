@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getAnimes } from '../redux/Companies/Companies';
 import { getDetails } from '../redux/details/details';
-import { getCategorie } from '../redux/Categorie/Categorie';
+import { getCategorie } from '../redux/Categories/Categories';
 
 import '../css/Menu.css';
 

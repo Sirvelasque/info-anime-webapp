@@ -3,9 +3,9 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
-import companiesReducer from './companies/companies';
+import companiesReducer from './Companies/Companies';
 import detailsReducer from './details/details';
-import categorieReducer from './categorie/categorie';
+import categorieReducer from './Categories/Categories';
 
 const reducers = combineReducers({
   animes: companiesReducer,
