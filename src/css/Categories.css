@@ -11,7 +11,8 @@
   flex-wrap: wrap;
   margin-right: 10px;
 }
-.animeitem a{
+
+.animeitem a {
   text-decoration: none;
   color: white;
   display: flex;
@@ -20,7 +21,7 @@
 .animeitem {
   display: flex;
   flex-wrap: nowrap;
-  background: linear-gradient(#e54986, black );
+  background: linear-gradient(#e54986, black);
   margin-bottom: 30px;
 }
 
