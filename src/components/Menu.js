@@ -17,7 +17,7 @@ const Menu = () => {
       dispatch(getDetails(1));
       init = 2;
     }
-  }, []);
+  }, [dispatch]);
 
   const sendCategorie = async (cat) => {
     dispatch(getCategorie(cat));
