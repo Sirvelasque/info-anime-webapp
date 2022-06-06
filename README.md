@@ -2,7 +2,7 @@
 
 # Info anime app
 
-> React&Redux based web application that fetches data from Jikan moe API v4 and render it giving you access to a categorie/genre search by mode and give you access to specific information
+> React&Redux based web application that fetches data from Jikan moe API v4 to render it giving you a categories/genres selections at firts to then pick a title and seee for specific information about it.
 
 
 ## Built With
