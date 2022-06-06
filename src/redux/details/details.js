@@ -20,4 +20,4 @@ const getDetails = (id = 1) => async (dispatch) => {
 };
 
 export default detailsReducer;
-export { getDetails };
+export { getDetails, ONEDETAILS };

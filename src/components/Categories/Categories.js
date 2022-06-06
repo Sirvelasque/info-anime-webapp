@@ -14,6 +14,7 @@ const chard = (anime) => {
         img={anime.data.data.images.webp.image_url}
         description={anime.data.data.synopsis}
         likes={anime.data.data.score}
+        key={anime.data.data.mal_id}
       />
     );
   }

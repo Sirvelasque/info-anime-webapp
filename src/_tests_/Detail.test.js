@@ -1,20 +1,33 @@
-import { getDetails } from '../redux/details/detail'
+import { Provider } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
+import {
+  render,
+  screen,
+} from '@testing-library/react';
+import React from "react";
+import Details from "../components/Details";
+import detailsReducer, { ONEDETAILS } from '../redux/details/details'
+import { useDispatch } from 'react-redux';
+import { store } from '../redux/ConfigureStore'
+import animes from '../_mocks_/animes'
 
-jest.mock("axios");
-
-describe("get details", () => {
-  it("ID 1 serie should  be cowboy bebop", () => {
-    const details = [
-      {
-        title: 'Cowboy Bebop',
-        rank: 37,
-        year: 1998,
-      },
-    ];
-    const test = {
-      type: 'ONEDETAILS',
-      payload: details,
+describe('Details test',() => {
+  const dispatch = useDispatch();
+  dispatch({
+    type: ONEDETAILS,
+    payload: animes,
+  })
+  const Jsx = () => (
+    <Provider store={store}>
+      <Details />
+    </Provider>
+  )
+  it('Cowboy Bebop should be in the document', () => {
+    const mockDetail = () => {
+      render(Jsx());
     }
-    expect(getDetails(details)).toEqual(test);
+    mockDetail();
+    expect(screen.getByText('Cowboy')).toBeInTheDocument();
   })
 })
+

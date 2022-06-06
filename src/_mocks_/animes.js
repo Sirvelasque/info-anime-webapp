@@ -1,15 +1,4 @@
-const anime = [
-  {
-    data: {
-      data: {
-        title: 'One punch man',
-        rank: 115,
-        year: 2015,
-
-      },
-    },
-  },
-  {
+const animes = {
     data: {
       data: {
         title: 'Cowboy Bebop',
@@ -18,8 +7,8 @@ const anime = [
 
       },
     },
-  },
+  };
 
-];
 
-export default anime;
+
+export default animes;
