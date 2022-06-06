@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://6292dca973bfe50009d96646--lucky-phoenix-71c99d.netlify.app)
+[Live Demo Link](https://629d45064bf92c00080a1368--lucky-phoenix-71c99d.netlify.app)
 
 
 ## Getting Started
