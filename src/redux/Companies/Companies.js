@@ -18,7 +18,7 @@ const getAnimes = () => async (dispatch) => {
     if (response.status === 200) {
        info.push(response);
     }
-  })}, 500*i  ))
+  })}, 520*(1+i)))
   );
   dispatch({
     type: DETAILS,

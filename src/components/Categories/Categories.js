@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAnimes } from '../../redux/Companies/Companies';
 import Categorie from './categorie';
+import Loading from '../loadingS';
 
 import '../../css/Categories.css';
 
@@ -24,23 +25,37 @@ const chard = (anime) => {
 const Categories = () => {
   const data = useSelector((state) => state);
   const dispatch = useDispatch();
+  const [loading, setLoading] = useState(false)
+
+  // Go to loading state on refresh
+  useEffect (() => {
+    if(data.animes.length === 0 && !loading) setLoading(() => true); 
+  }, [data.animes.length, loading])
+
+  // Dispatch action to get data in case we don't have it and timeOut loading shift
   useEffect(() => {
     if (data.animes.length === 0) {
       dispatch(getAnimes());
     }
-  }, [data.animes.length, dispatch]);
+    if(loading === true) setTimeout(() => setLoading(false), 4500);
+  }, [data.animes.length, dispatch, loading]);
+
+  // Filter with actual category
   const animeList = data.animes.filter((e) => {
     for (let i = 0; i < e.data.data.genres.length; i += 1) {
       if (e.data.data.genres[i].name === data.categorie) return true;
     }
     return false;
   });
+
   return (
     <div>
+      {loading ? <Loading /> : 
       <div className="categoriesChard">
         <h2>{data.categorie}</h2>
         {animeList.map((e) => chard(e))}
       </div>
+      }
     </div>
   );
 };
