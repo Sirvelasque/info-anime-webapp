@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render App 1`] = `null`;
+
+exports[`Render Categories 1`] = `null`;
+
+exports[`Render Navbar 1`] = `null`;
+
+exports[`render details 1`] = `null`;
+
+exports[`renders Menu 1`] = `null`;

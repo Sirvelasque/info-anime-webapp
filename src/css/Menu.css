@@ -1,0 +1,93 @@
+.categories {
+  margin-top: 30px;
+  display: flex;
+  justify-self: center;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+body {
+  color: white;
+}
+
+.categories a {
+  width: 100%;
+}
+
+.genre {
+  width: 50%;
+  height: 43vh;
+  border: none;
+  color: white;
+  font-size: 42px;
+  line-height: 48px;
+  padding-top: 370px;
+}
+
+.Action {
+  background:
+    linear-gradient(black, #e54986),
+    url("../resource/action.png");
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-blend-mode: exclusion;
+  cursor: pointer;
+}
+
+.Comedy {
+  background:
+    linear-gradient(black, #d04278),
+    url("../resource/comedy.jpg");
+  background-repeat: no-repeat;
+  background-size: 128.3%;
+  background-blend-mode: exclusion;
+  cursor: pointer;
+}
+
+.Gourmet {
+  background:
+    linear-gradient(black, #e54986),
+    url("../resource/gourmet.jpg");
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-blend-mode: exclusion;
+  cursor: pointer;
+}
+
+.Fantasy {
+  background:
+    linear-gradient(black, #d04278),
+    url("../resource/fantasy.jpg");
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-blend-mode: exclusion;
+  cursor: pointer;
+}
+
+.Drama {
+  background:
+    linear-gradient(black, #e54986),
+    url("../resource/drama.jpg");
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-blend-mode: exclusion;
+  cursor: pointer;
+}
+
+.Slice {
+  background:
+    linear-gradient(black, #d04278),
+    url("../resource/slice.jpg");
+  background-repeat: no-repeat;
+  background-size: 144.4%;
+  background-blend-mode: exclusion;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 980px) {
+  .genre {
+    height: 200px;
+    padding-top: 100px;
+  }
+}
