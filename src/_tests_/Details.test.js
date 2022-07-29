@@ -5,7 +5,7 @@ import Details from '../components/Details';
 import Menu from '../components/Menu';
 import Navbar from '../components/NavBar';
 import Categories from '../components/Categories/Categories';
-import App from '../App'
+import App from '../App';
 
 test('render details', () => {
   const Container = () => {
