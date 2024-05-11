@@ -9,7 +9,7 @@ const categorieReducer = (state = 'Action', action) => {
   }
 };
 
-const getCategorie = (cat) => async (dispatch) => {
+const getCategorie = (cat) => (dispatch) => {
   dispatch({
     type: CATEGORIECHANGE,
     payload: cat,
