@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://629d45064bf92c00080a1368--lucky-phoenix-71c99d.netlify.app)
+[Live Demo Link](https://lucky-phoenix-71c99d.netlify.app)
 
 
 ## Getting Started
@@ -50,7 +50,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- [Jikan moe](https://jikan.moe): This app uses api from Coin Market Cap
+- [Jikan moe](https://jikan.moe): This app uses api from Jikan moe which use data from MyAnimeList
 - Original design by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
 - A special thank for @fernandorpm for this amazing [README template](https://github.com/microverseinc/readme-template)
 
