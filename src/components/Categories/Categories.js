@@ -1,62 +1,65 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAnimes } from '../../redux/Companies/Companies';
-import Categorie from './categorie';
+import Categorie from './categorie'; // Assuming the renaming for clarity
 import Loading from '../loadingS';
-
 import '../../css/Categories.css';
 
-const chard = (anime) => {
-  if (anime.length !== 0) {
-    return (
-      <Categorie
-        id={anime.data.data.mal_id}
-        name={anime.data.data.title}
-        img={anime.data.data.images.webp.image_url}
-        description={anime.data.data.synopsis}
-        likes={anime.data.data.score}
-        key={anime.data.data.mal_id}
-      />
-    );
-  }
-  return null;
+const renderAnimeCard = (anime) => {
+  const {
+    mal_id: malId, // Renaming `mal_id` to `malId` to comply with camelCase
+    title,
+    images,
+    synopsis,
+    score,
+  } = anime.data.data;
+
+  return (
+    <Categorie
+      id={malId} // using the camelCase variable here
+      name={title}
+      img={images.webp.image_url}
+      description={synopsis}
+      likes={score}
+      key={malId} // and here
+    />
+  );
 };
 
 const Categories = () => {
-  const data = useSelector((state) => state);
+  const animes = useSelector((state) => state.animes);
+  const categorie = useSelector((state) => state.categorie);
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
 
-  // Go to loading state on refresh
+  // Dispatch action to get data if we don't have it and manage loading state
   useEffect(() => {
-    if (data.animes.length === 0 && !loading) setLoading(() => true);
-  }, [data.animes.length, loading]);
-
-  // Dispatch action to get data in case we don't have it and timeOut loading shift
-  useEffect(() => {
-    if (data.animes.length === 0) {
+    if (animes.length === 0) {
+      setLoading(true);
       dispatch(getAnimes());
     }
-    if (loading === true) setTimeout(() => setLoading(false), 4500);
-  }, [data.animes.length, dispatch, loading]);
+  }, [animes.length, dispatch]);
+
+  // Automatically set loading to false when animes are fetched
+  useEffect(() => {
+    if (animes.length > 0 && loading) {
+      setTimeout(() => setLoading(false), 4500);
+      // Consider moving this timeout logic closer to your data fetching logic
+    }
+  }, [animes.length, loading]);
 
   // Filter with actual category
-  const animeList = data.animes.filter((e) => {
-    for (let i = 0; i < e.data.data.genres.length; i += 1) {
-      if (e.data.data.genres[i].name === data.categorie) return true;
-    }
-    return false;
-  });
+  const animeList = animes
+    .filter((anime) => anime.data.data.genres.some((genre) => genre.name === categorie));
 
   return (
     <div>
-      {loading ? <Loading />
-        : (
-          <div className="categoriesChard">
-            <h2>{data.categorie}</h2>
-            {animeList.map((e) => chard(e))}
-          </div>
-        )}
+      {loading ? <Loading /> : (
+        <div className="categoriesChard">
+          <h2>{categorie}</h2>
+          {animeList.map(renderAnimeCard)}
+        </div>
+      )}
     </div>
   );
 };
