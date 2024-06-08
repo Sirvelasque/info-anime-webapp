@@ -22,9 +22,9 @@
 
 ## Getting Started
 
-- Copy the URL: git@github.com:Sirvelasque/info-anime-webapp.git"
+- Copy the URL: git@github.com:Sirvelasque/info-anime-webapp.git
 - In your terminal, go to the directory you want to clone the repository.
-- Use the command: git clone git@github.com:Sirvelasque/Bookstore.git
+- Use the command: git clone git@github.com:Sirvelasque/info-anime-webapp.git
 - Open index.html file
 - Run npm install in the terminal to install node modules
 - Execute npm run dev in terminal to build the development files
