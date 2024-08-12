@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://629d45064bf92c00080a1368--lucky-phoenix-71c99d.netlify.app)
+[Live Demo Link]([https://629d45064bf92c00080a1368--lucky-phoenix-71c99d.netlify.app](https://github.com/Sirvelasque/info-anime-webapp/tree/Asemble))
 
 
 ## Getting Started
